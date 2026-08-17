@@ -1,3 +1,5 @@
+English
+
 # Step 1
 ```
 sudo pacman -S wofi kitty freetype2 zsh git hyprlock hyprpaper waybar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono obsidian pavucontrol feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim code ttf-dejavu bluez bluez-utils blueman telegram-desktop vlc fastfetch
@@ -75,4 +77,93 @@ whoami
 
 ```
 
+Russian | Русский
 
+
+# Этап 1
+впишите в командную строку поочерёдно команды
+
+```
+sudo pacman -S wofi kitty freetype2 zsh git hyprlock hyprpaper waybar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono obsidian pavucontrol feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim code ttf-dejavu bluez bluez-utils blueman telegram-desktop vlc fastfetch
+
+
+sudo pacman -S --needed base-devel
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+yay -S hyprshot wlogout
+
+```
+
+#Этап 3
+
+**склонировать репозитории**
+
+```
+
+
+git clone https://github.com/vinceliuice/Graphite-gtk-theme.git
+
+```
+
+# Этап 4
+
+**скопировать конфиг и скачать gtk**
+
+```
+
+
+cd Graphite-gtk-theme
+./install.sh
+```
+
+# Этап 5
+
+**Темы для OH MY ZSH**
+Введите команды в терминал по очереди
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+потом введите команду
+```
+nano ~/.zshrc
+```
+там найдите ZSH_THEME удалите строчку и замените на
+```
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+дальше найдите строчку где находится plugins=(git) и замените на 
+
+```
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+```
+потом выйдите из 'nano' при помощи комбиначии клавиш  "ctrl + o" и нажмите клавишу "y" и потом клавиша
+"ctrl + x"
+
+и введите команду
+```
+source ~/.zshrc
+
+```
+настройте под себя нажимая клавиши "y" "n" "1" "2" "3" "4" а если что-то неправильно то "r" потом перезапустите компьютер командой 
+```
+
+reboot
+```
+
+откройте hyprland.lua конфиг при помощи команды 
+```
+nano /home/{user}/.config/hypr/hyprland.lua
+
+```
+замените {user} на ваше имя пользователя (уберите {}). если не знаеете ваше имя пользователя введите команду
+```
+whoami
+
+```
