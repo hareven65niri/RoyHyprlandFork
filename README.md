@@ -2,6 +2,9 @@
 ```
 sudo pacman -S wofi kitty freetype2 zsh git hyprlock hyprpaper waybar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono obsidian pavucontrol feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim code ttf-dejavu bluez bluez-utils blueman telegram-desktop vlc fastfetch
 
+
+sudo pacman -S --needed base-devel
+
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -43,19 +46,33 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-nvim ~/.zshrc
+nano ~/.zshrc
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+```
+next exit of nano using ctrl + o and y
+ctrl + x
+
+and type command 
+```
 source ~/.zshrc
 
-chsh
-/bin/zshrc
+
+
 
 reboot
 ```
 
+open a hyprland.lua config via command
+```
+nano /home/{user}/.config/hypr/hyprland.lua
 
+```
+change {user} to your account username(delete a {}). if you don't know type command in command line
+```
+whoami
 
-
+```
 
 
